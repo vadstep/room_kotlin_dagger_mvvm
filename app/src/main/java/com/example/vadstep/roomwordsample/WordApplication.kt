@@ -20,9 +20,8 @@ class WordApplication : Application(), HasActivityInjector {
 
     override fun onCreate() {
         super.onCreate()
-        DaggerAppComponent
-                .builder()
-                .application(this)
+        DaggerAppComponent.builder()
+                .appModule(AppModule(this))
                 .build()
                 .inject(this);
     }
