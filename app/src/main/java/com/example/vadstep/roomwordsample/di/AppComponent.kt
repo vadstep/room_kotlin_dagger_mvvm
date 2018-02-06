@@ -16,7 +16,6 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = [
     AndroidSupportInjectionModule::class,
-    AppModule::class,
     BuildersModule::class
 ])
 interface AppComponent : AndroidInjector<WordApplication> {
