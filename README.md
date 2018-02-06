@@ -1,1 +1,1 @@
-room_kotlin_dagger_mvvm
+roomSample
