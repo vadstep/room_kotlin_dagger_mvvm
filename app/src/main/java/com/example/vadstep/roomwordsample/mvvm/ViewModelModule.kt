@@ -1,4 +1,4 @@
-package com.example.vadstep.roomwordsample.di
+package com.example.vadstep.roomwordsample.mvvm
 
 import android.app.Application
 import com.example.vadstep.roomwordsample.repo.WordRepository
@@ -12,7 +12,7 @@ import javax.inject.Singleton
 /**
  * Created by User1 on 05/02/2018.
  */
-@Module(includes = arrayOf(RoomModule::class))
+@Module
 class ViewModelModule {
 
     @Singleton

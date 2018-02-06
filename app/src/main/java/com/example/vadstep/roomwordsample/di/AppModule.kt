@@ -1,23 +1,16 @@
 package com.example.vadstep.roomwordsample.di
 
-import android.app.Application
-import android.content.Context
+import com.example.vadstep.roomwordsample.mvvm.ViewModelModule
+import com.example.vadstep.roomwordsample.db.WordRoomDBModule
+import com.example.vadstep.roomwordsample.repo.RepositoryModule
 import dagger.Module
-import dagger.Provides
-import javax.inject.Singleton
 
 
 /**
  * Created by User1 on 04/02/2018.
  */
 
-@Module
-class AppModule(internal var mApplication: Application) {
-
-    @Provides
-    @Singleton
-    internal fun providesApplication(): Application {
-        return mApplication
-    }
+@Module(includes = arrayOf(WordRoomDBModule::class, RepositoryModule::class, ViewModelModule::class))
+class AppModule() {
 
 }

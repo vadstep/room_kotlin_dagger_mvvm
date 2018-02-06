@@ -1,9 +1,7 @@
-package com.example.vadstep.roomwordsample.di
+package com.example.vadstep.roomwordsample.db
 
 import android.app.Application
 import android.arch.persistence.room.Room
-import com.example.vadstep.roomwordsample.db.WordDao
-import com.example.vadstep.roomwordsample.db.WordRoomDatabase
 import com.example.vadstep.roomwordsample.repo.WordRepository
 import dagger.Module
 import dagger.Provides
@@ -12,8 +10,8 @@ import javax.inject.Singleton
 /**
  * Created by User1 on 05/02/2018.
  */
-@Module(includes = arrayOf(AppModule::class))
-class RoomModule() {
+@Module
+class WordRoomDBModule() {
 
 
     @Singleton
@@ -28,9 +26,4 @@ class RoomModule() {
         return demoDatabase.wordDao()
     }
 
-    @Singleton
-    @Provides
-    internal fun productRepository(wordDao: WordDao): WordRepository {
-        return WordRepository(wordDao)
-    }
 }

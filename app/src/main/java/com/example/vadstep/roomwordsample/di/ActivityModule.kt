@@ -8,8 +8,8 @@ import dagger.android.ContributesAndroidInjector
 /**
  * Created by User1 on 05/02/2018.
  */
-@Module(includes = arrayOf(ViewModelModule::class))
-abstract class BuildersModule {
+@Module
+abstract class ActivityModule {
 
     @ContributesAndroidInjector
     internal abstract fun bindMainActivity(): MainActivity
